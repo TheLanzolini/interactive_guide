@@ -1,5 +1,4 @@
 // Angular app and controllers; do not touch if you dont know angularjs and js
-console.log(notes);
 var app = angular.module('igApp', []);
 app.controller('igController', ['$scope', function($scope){
   $scope.patch = patch;
@@ -19,7 +18,7 @@ app.controller('igController', ['$scope', function($scope){
   };
   $scope.champions = {
     "caitlyn": {
-      "name": "Caitlyn"
+      "name": "caitlyn"
       ,"title": "The Sheriff of Piltover"
       ,"baseHp": 390
       ,"baseMp": 255
@@ -27,17 +26,24 @@ app.controller('igController', ['$scope', function($scope){
       ,"mp5": "6.5"
       ,"hplvl": 80
       ,"mplvl": 35
-      ,"poke": 10
-      ,"burst": 6
-      ,"mobility": 6
-      ,"seige": 10
-      ,"laning": 10
-      ,"teamfight": 8
+      ,"champattrs": champattrs
+    }
+    ,"thresh": {
+      "name": "thresh"
+      ,"title": "The Chain Warden"
+      ,"baseHp": 411
+      ,"baseMp": 200
+      ,"hp5": "6"
+      ,"mp5": "5"
+      ,"hplvl": 89
+      ,"mplvl": 44
+      ,"champattrs": champattrs
     }
   };
+  $scope.runes = runes;
+  console.log($scope.runes);
   $scope.champion = $scope.champions[champion];
   $scope.summonerSpellOne = $scope.summonerSpells[summonerSpellOne];
   $scope.summonerSpellTwo = $scope.summonerSpells[summonerSpellTwo];
-  console.log($scope.summonerSpells);
+  console.log($scope.champions);
 }]);
-console.log(app);

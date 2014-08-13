@@ -4,8 +4,8 @@
 <script type="text/javascript" src="ig.js"></script>
 <link rel="stylesheet" src="ig.css" />
 <div id="ig-wrapper" ng-app="igApp" ng-controller="igController">
+  <img class="ig-champion-splash" ng-src="images/champion/{{champion.name}}/splash.jpg" />
   <div class="ig-panel ig-panel-top">
-    <img class="ig-champion-image" ng-src="" />
     <div class="ig-author">
       <h2 class="ig-author-title"> {{author.name}} </h2>
       <span class="ig-author-website"> {{author.website}} </span>
@@ -58,22 +58,22 @@
       </div>
     </div>
     <div class="ig-meta-attrs">
-      <div data-fill="{{champion.poke}}" class="ig-meta-attr poke">
+      <div data-fill="{{champion.champattrs.poke}}" class="ig-meta-attr poke">
         <span class="ig-meta-attr-title">Poke</span>
       </div>
-      <div data-fill="{{champion.burst}}" class="ig-meta-attr burst">
+      <div data-fill="{{champion.champattrs.burst}}" class="ig-meta-attr burst">
         <span class="ig-meta-attr-title">Burst</span>
       </div>
-      <div data-fill="{{champion.mobility}}" class="ig-meta-attr mobility">
+      <div data-fill="{{champion.champattrs.mobility}}" class="ig-meta-attr mobility">
         <span class="ig-meta-attr-title">Mobility</span>
       </div>
-      <div data-fill="{{champion.seige}}" class="ig-meta-attr siege">
+      <div data-fill="{{champion.champattrs.seige}}" class="ig-meta-attr siege">
         <span class="ig-meta-attr-title">Siege</span>
       </div>
-      <div data-fill="{{champion.laning}}" class="ig-meta-attr laning">
+      <div data-fill="{{champion.champattrs.laning}}" class="ig-meta-attr laning">
         <span class="ig-meta-attr-title">Laning</span>
       </div>
-      <div data-fill="{{champion.teamfight}}" class="ig-meta-attr teamfight">
+      <div data-fill="{{champion.champattrs.teamfight}}" class="ig-meta-attr teamfight">
         <span class="ig-meta-attr-title">Teamfight</span>
       </div>
     </div>
