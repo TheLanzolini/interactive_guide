@@ -1,0 +1,87 @@
+<doctype html>
+  <html>
+    <head>
+      <title>interactive guide</title>
+      <script type="text/javascript" src="angular.min.js"></script>
+      <script type="text/javascript" src="ig.js"></script>
+      <link rel="stylesheet" src="ig.css" />
+    </head>
+    <body>
+      <div id="ig-wrapper" ng-app="igApp" ng-controller="igController">
+        <div class="ig-panel ig-panel-top">
+          <img class="ig-champion-image" ng-src="" />
+          <div class="ig-author">
+            <h2 class="ig-author-title"> {{author.name}} </h2>
+            <span class="ig-author-website"> {{author.website}} </span>
+          </div>
+          <h3>Relevant since Patch: {{patch}} </h3>
+          <h1 class="ig-champname"> {{champion.name}} <h1>
+          <h2 class="ig-champtitle"> {{champion.title}} </h2>
+          <div class="ig-sum-spells">
+            <div class="ig-sum-spell">
+              <span class="ig-sum-spell-name"> {{summonerSpellOne.name}} </span>
+              <img ng-src="#{{summonerSpellOne.imageSrc}}" />
+            </div>
+            <div class="ig-sum-spell">
+              <span class="ig-sum-spell-name"> {{summonerSpellTwo.name}} </span>
+              <img ng-src="#{{summonerSpellTwo.imageSrc}}" />
+            </div>
+          </div>
+          <div class="ig-runes">
+            <div class="ig-runes-type marks">
+              <span class="ig-rune-title marks">Marks</span>
+              <img ng-src="" />
+            </div>
+            <div class="ig-runes-type seals">
+              <span class="ig-rune-title seals">Seals</span>
+              <img ng-src="" />
+            </div>
+            <div class="ig-runes-type glyphs">
+              <span class="ig-rune-title glyphs">Glyphs</span>
+              <img ng-src="" />
+            </div>
+            <div class="ig-runes-type quints">
+              <span class="ig-rune-title quints">Quints</span>
+              <img ng-src="" />
+            </div>
+          </div>
+          <div class="ig-bars">
+            <div class="ig-health-bar">
+              <span class="ig-hp5"> {{champion.hp5}} </span>
+              <div class="ig-hp-bar">
+                <span class="ig-base-hp"> {{champion.baseHp}} </span>
+                <span class="ig-hp-lvl"> {{champion.hplvl}} </span>
+              <div>
+            </div>
+            <div class="ig-mana-bar">
+              <span class="ig-mp5"> {{champion.mp5}} </span>
+              <div class="ig-mp-bar">
+                <span class="ig-base-mp"> {{champion.baseMp}} </span>
+                <span class="ig-mp-lvl"> {{champion.mplvl}} </span>
+              </div>
+            </div>
+            <div class="ig-meta-attrs">
+              <div data-fill="{{champion.poke}}" class="ig-meta-attr poke">
+                <span class="ig-meta-attr-title">Poke</span>
+              </div>
+              <div data-fill="{{champion.burst}}" class="ig-meta-attr burst">
+                <span class="ig-meta-attr-title">Burst</span>
+              </div>
+              <div data-fill="{{champion.mobility}}" class="ig-meta-attr mobility">
+                <span class="ig-meta-attr-title">Mobility</span>
+              </div>
+              <div data-fill="{{champion.seige}}" class="ig-meta-attr siege">
+                <span class="ig-meta-attr-title">Siege</span>
+              </div>
+              <div data-fill="{{champion.laning}}" class="ig-meta-attr laning">
+                <span class="ig-meta-attr-title">Laning</span>
+              </div>
+              <div data-fill="{{champion.teamfight}}" class="ig-meta-attr teamfight">
+                <span class="ig-meta-attr-title">Teamfight</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+  </html>
