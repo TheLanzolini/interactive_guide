@@ -13,9 +13,15 @@ app.controller('igController', ['$scope', function($scope){
     }
   };
   $scope.author = {
-    name: "TheLanzolini"
-    ,website: "twitch.tv/thelanzolini"
+    name: authorName
+    ,website: authorWebsite
+    ,twitch: authorTwitch
+    ,youtube: authorYouTube
+    ,twitter: authorTwitter
+    ,facebook: authorFacebook
   };
+  $scope.showRankedInfo = showRankedInfo;
+  console.log($scope.showRankedInfo);
   $scope.champions = {
     "caitlyn": {
       "name": "caitlyn"
@@ -41,7 +47,7 @@ app.controller('igController', ['$scope', function($scope){
     }
   };
   $scope.runes = runes;
-  console.log($scope.runes);
+  console.log($scope.author);
   $scope.champion = $scope.champions[champion];
   $scope.summonerSpellOne = $scope.summonerSpells[summonerSpellOne];
   $scope.summonerSpellTwo = $scope.summonerSpells[summonerSpellTwo];

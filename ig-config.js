@@ -8,22 +8,24 @@
 // |====================================|
 // | SET THESE OPTIONS. LOWER CASE ONLY |
 // |====================================|
-// |     EXCPET FOR NOTES AND TIPS      |
+// | EXCPET FOR NOTES AND TIPS & AUTHOR |
 // |====================================|
 
 var patch = "4.13"
 
 
-var authorName = "thelanzolini";
+var authorName = "TheLanzolini";
+var authorWebsite = "http://google.com"
+var authorTwitch = "http://twitch.tv/thelanzolini";
+var authorYouTube = "http://youtube.com/thelanzolini";
+var authorTwitter = "http://twitter.com/thelanzolini";
+var authorFacebook = "http://facebook.com/lanzoni";
+
+var showRankedInfo = true;
 var summonerName = "thelanzolini";
-var authorTwitch = "twitch.tv/thelanzolini";
-var authorYouTube = "youtube.com/thelanzolini";
-var authorTwitter = "twitter.com/thelanzolini";
-var authorFacebook = "facebook.com/lanzoni";
-var showRankedInfo = false;
+var summonerRegion = "na"
 
-
-var champion = "thresh";
+var champion = "caitlyn";
 var summonerSpellOne = "flash";
 var summonerSpellTwo = "ignite";
 var runes = {
