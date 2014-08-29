@@ -4,19 +4,26 @@
 <script type="text/javascript" src="ig.js"></script>
 <link rel="stylesheet" type="text/css" href="ig.css" />
 <div id="ig-wrapper" ng-app="igApp" ng-controller="igController">
-  <img class="ig-champion-splash" ng-src="images/champion/{{champion.name}}/splash.jpg" />
+  <div class="ig-splash-container">
+    <img class="ig-champion-splash" ng-src="images/champion/{{champion.name}}/splash.jpg" />
+  </div>
   <div class="ig-panel ig-panel-top">
     <div ng-class="{showranked: showRankedInfo}" class="ig-author">
       <h2 class="ig-author-name"> {{author.name}} </h2>
-      <a target="_blank" href="{{author.website}}"><img src="images/summoner/social/website" /></a>
-      <a target="_blank" href="{{author.twitch}}"><img src="images/summoner/social/twitch" /></a>
-      <a target="_blank" href="{{author.twitter}}"><img src="images/summoner/social/twitter" /></a>
-      <a target="_blank" href="{{author.youtube}}"><img src="images/summoner/social/youtube" /></a>
-      <a target="_blank" href="{{author.facebook}}"><img src="images/summoner/social/facebook" /></a>
+      <span class="ig-rank" ng-show="{{showRankedInfo}}"> DIAMOND I </span>
+      <div class="ig-social-container">
+        <a target="_blank" href="{{author.website}}"><img src="http://placehold.it/25x25" data-fake-src="images/summoner/social/website" /></a>
+        <a target="_blank" href="{{author.twitch}}"><img src="http://placehold.it/25x25" data-fake-src="images/summoner/social/twitch" /></a>
+        <a target="_blank" href="{{author.twitter}}"><img src="http://placehold.it/25x25" data-fake-src="images/summoner/social/twitter" /></a>
+        <a target="_blank" href="{{author.youtube}}"><img src="http://placehold.it/25x25" data-fake-src="images/summoner/social/youtube" /></a>
+        <a target="_blank" href="{{author.facebook}}"><img src="http://placehold.it/25x25" data-fake-src="images/summoner/social/facebook" /></a>
+      </div>
     </div>
-    <h3>Relevant since Patch: {{patch}} </h3>
-    <h1 class="ig-champname"> {{champion.name}} <h1>
-    <h2 class="ig-champtitle"> {{champion.title}} </h2>
+    <div class="ig-guide-title">
+      <span class="ig-patch">Relevant since Patch: {{patch}} </span>
+      <h1 class="ig-champname"> {{champion.name}} </h1>
+      <h2 class="ig-champtitle"> {{champion.title}} </h2>
+    </div>
     <div class="ig-sum-spells">
       <div class="ig-sum-spell">
         <span class="ig-sum-spell-name"> {{summonerSpellOne.name}} </span>

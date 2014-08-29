@@ -21,11 +21,13 @@ var authorYouTube = "http://youtube.com/thelanzolini";
 var authorTwitter = "http://twitter.com/thelanzolini";
 var authorFacebook = "http://facebook.com/lanzoni";
 
-var showRankedInfo = true;
+var enableTwitchStream = false;
+
+var showRankedInfo = false;
 var summonerName = "thelanzolini";
 var summonerRegion = "na"
 
-var champion = "caitlyn";
+var champion = "thresh";
 var summonerSpellOne = "flash";
 var summonerSpellTwo = "ignite";
 var runes = {
